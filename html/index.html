@@ -1,0 +1,39 @@
+<!DOCTYPE html><title></title>
+<!--
+	
+Hay varios modulos a modificar en sta carpeta ../html/
+
+mod_feed/
+mod_finder/
+mod_login/
+mod_menu/
+mod_search/
+
+Falta cotejar estos archivos:
+
+modules.php
+
+
+En este asunto voy:
+// con este script se modifica el field input que se genera en cada formulario.
+				<?php $required = '' ; if ($field->required) : $required =  'required'; endif ;
+					  $field->__set('class', $field->getAttribute('class')." form-control $required"); ?>							
+				<?php echo $field->input; ?></div>
+
+https://zunostudios.com/blog/development/207-how-to-add-bootstrap-3-styles-to-joomla-s-com-users-form-elements
+<?php $field->__set('class', $field->getAttribute('class').' form-control'); ?>
+
+https://forum.joomla.org/viewtopic.php?t=858979 ****interesante
+
+17 enero, los formularios hay que ajustar el btn-toolbar >> filters btn-toolbar-no row
+archivo: html/com_tags/tags/default_items.php
+url: http://www.loshijosdelrol.com/grimoretvitae/list-of-all-tags
+
+20 de enero, pendiente el modal
+"joomla > modal override"
+http://www.msbfr.net/item/246-using-modal-windows-in-joomla
+
+
+
+-->
+

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="template">
+	<name>bixniajfw</name>
+	<creationDate>07 February 2015</creationDate>
+	<author>Ricardo Uriel</author>
+	<authorEmail>contacto@bixnia.com</authorEmail>
+	<authorUrl>http://www.bixnia.com</authorUrl>
+	<copyright>Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<version>1.0</version>
+	<description>TPL_BIXNIAJFW_XML_DESCRIPTION</description>
+	<!-- Archivos -->
+	<files>
+		<folder>bootstrap</folder>
+		<folder>css</folder>
+		<folder>font-awesome</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>includes</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>error.php</filename>
+		<filename>component.php</filename>
+	</files>
+	<!-- Posiciones -->
+	<positions>
+		<position>top</position>
+		<position>header</position>
+		<position>section-top</position>
+		<position>aside-left</position>
+		<position>content-top</position>
+		<position>content-bottom</position>
+		<position>aside-right</position>
+		<position>section-bottom</position>
+		<position>footer</position>
+		<position>bottom</position>
+		<position>debug</position>
+	</positions>
+	<!-- Idioma -->
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_bixniajfw.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_bixniajfw.sys.ini</language>
+	</languages>
+	<!-- Opciones de template Bixnia -->	
+	<config>
+		<fields name="params">
+			
+			<fieldset name="layout">
+										
+				<field type="spacer" name="layoutdesc" label="TPL_BIXNIAJFW_LAYOUT_DESC" />
+
+				<field name="fluidContainer" type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_BIXNIAJFW_FLUID_LABEL"
+					description="TPL_BIXNIAJFW_FLUID_DESC" >
+					<option value="1">TPL_BIXNIAJFW_FLUID</option>
+					<option value="0">TPL_BIXNIAJFW_STATIC</option>
+				</field>
+				
+				<field name="leftCol" type="integer" default="3" 
+					label="TPL_BIXNIAJFW_FIELD_LEFTCOL_LABEL" 
+					description="TPL_BIXNIAJFW_FIELD_LEFTCOL_DESC" 
+					first="0" last="12" 
+					step="1" />
+					
+				<field name="comCol" type="integer" default="6" 
+					label="TPL_BIXNIAJFW_FIELD_COMCOL_LABEL" 
+					description="TPL_BIXNIAJFW_FIELD_COMCOL_DESC" 
+					first="0" last="12" 
+					step="1" />
+					
+				<field name="rightCol" type="integer" default="3" 
+					label="TPL_BIXNIAJFW_FIELD_RIGHTCOL_LABEL" 
+					description="TPL_BIXNIAJFW_FIELD_RIGHTCOL_DESC" 
+					first="0" last="12" 
+					step="1" />
+
+			</fieldset>
+			
+			
+			<fieldset name="design">
+										
+				<field type="spacer" name="designdesc" label="TPL_BIXNIAJFW_DESIGN_DESC" />
+
+				<field name="logo" type="media"
+					   label="TPL_BIXNIAJFW_FIELD_LOGO_LABEL" description="TPL_BIXNIAJFW_FIELD_LOGO_DESC" />
+
+				<field name="backgroundimage" type="media"
+					   label="TPL_BIXNIAJFW_FIELD_BKGIMG_LABEL" description="TPL_BIXNIAJFW_FIELD_BKGIMG_DESC" />
+					   
+				<field name="bkgimglayout" type="list" default="0" label="TPL_BIXNIAJFW_FIELD_BKGIMGLAY_LABEL" description="TPL_BIXNIAJFW_FIELD_BKGIMGLAY_DESC">
+					  <option value="0">TPL_BIXNIAJFW_FIELD_BKGIMGLAY_0</option>
+					  <option value="1">TPL_BIXNIAJFW_FIELD_BKGIMGLAY_1</option>
+					  <option value="2">TPL_BIXNIAJFW_FIELD_BKGIMGLAY_2</option>
+					  <option value="3">TPL_BIXNIAJFW_FIELD_BKGIMGLAY_3</option>
+					  <option value="4">TPL_BIXNIAJFW_FIELD_BKGIMGLAY_4</option>
+				</field>					   					   
+					   
+				<field name="bkgcolor" type="color" default="#fff"
+						label="TPL_BIXNIAJFW_FIELD_BKGCOLOR_LABEL"
+						description="TPL_BIXNIAJFW_FIELD_BKGCOLOR_DESC" />
+
+				<field name="headerbkgcolor" type="color" default="#eee"
+						label="TPL_BIXNIAJFW_FIELD_HEADERBKGCOLOR_LABEL"
+						description="TPL_BIXNIAJFW_FIELD_HEADERBKGCOLOR_DESC" />
+
+				<field name="footerbkgcolor" type="color" default="#000"
+						label="TPL_BIXNIAJFW_FIELD_FOOTERBKGCOLOR_LABEL"
+						description="TPL_BIXNIAJFW_FIELD_FOOTERBKGCOLOR_DESC" />
+
+				<field name="textcolor" type="color" default="#666"
+						label="TPL_BIXNIAJFW_FIELD_TEXTCOLOR_LABEL"
+						description="TPL_BIXNIAJFW_FIELD_TEXTCOLOR_DESC" />
+						
+				<field type="spacer" name="typedesc" label="TPL_BIXNIAJFW_TYPE_DESC" />
+												
+				<field name="fontsheading"  type="text" default=""
+					label="TPL_BIXNIAJFW_FIELD_FONTSHEADING_LABEL"
+					description="TPL_BIXNIAJFW_FIELD_FONTSHEADING_DESC"
+					filter="string" />
+						
+				<field name="fontscontent"  type="text" default=""
+					label="TPL_BIXNIAJFW_FIELD_FONTSCONTENT_LABEL"
+					description="TPL_BIXNIAJFW_FIELD_FONTSCONTENT_DESC"
+					filter="string" />
+					   
+			</fieldset>			
+
+
+			<fieldset name="optimize">
+				
+				<field type="spacer" name="optimizedesc" label="TPL_BIXNIAJFW_OPTIMIZE_DESC" />
+				
+				<field type="spacer" name="smtags" label="TPL_BIXNIAJFW_SMTAGS_DESC" />
+								
+				<field name="taggplus" type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_BIXNIAJFW_TAGGPLUS_LABEL"
+					description="TPL_BIXNIAJFW_TAGGPLUS_DESC" >
+					<option value="1">TPL_BIXNIAJFW_YES</option>
+					<option value="0">TPL_BIXNIAJFW_NO</option>
+				</field>				
+				
+				<field name="tagtcard" type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_BIXNIAJFW_TAGTCARD_LABEL"
+					description="TPL_BIXNIAJFW_TAGTCARD_DESC" >
+					<option value="1">TPL_BIXNIAJFW_YES</option>
+					<option value="0">TPL_BIXNIAJFW_NO</option>
+				</field>				
+				
+				<field name="tagfbograph" type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_BIXNIAJFW_TAGFBOGRAPH_LABEL"
+					description="TPL_BIXNIAJFW_TAGFBOGRAPH_DESC" >
+					<option value="1">TPL_BIXNIAJFW_YES</option>
+					<option value="0">TPL_BIXNIAJFW_NO</option>
+				</field>		
+				
+				<field type="spacer" name="seotools" label="TPL_BIXNIAJFW_SEOTOOLS_DESC" />
+									
+				<field name="wmtools"  type="text" default=""
+					label="TPL_BIXNIAJFW_FIELD_WMTOOLS_LABEL"
+					description="TPL_BIXNIAJFW_FIELD_WMTOOLS_DESC"
+					filter="string" />
+
+				<field name="bing"  type="text" default=""
+					label="TPL_BIXNIAJFW_FIELD_BING_LABEL"
+					description="TPL_BIXNIAJFW_FIELD_BING_DESC"
+					filter="string" />
+					
+				<field name="pinterest"  type="text" default=""
+					label="TPL_BIXNIAJFW_FIELD_PINTEREST_LABEL"
+					description="TPL_BIXNIAJFW_FIELD_PINTEREST_DESC"
+					filter="string" />
+
+				<field name="appfacebook"  type="text" default=""
+					label="TPL_BIXNIAJFW_FIELD_APPFACEBOOK_LABEL"
+					description="TPL_BIXNIAJFW_FIELD_APPFACEBOOK_DESC"
+					filter="string" />
+
+				<field name="analytics"  type="text" default=""
+					label="TPL_BIXNIAJFW_FIELD_ANALYTICS_LABEL"
+					description="TPL_BIXNIAJFW_FIELD_ANALYTICS_DESC"
+					filter="string" />
+
+				<field name="gtagmanage" type="textarea" default="" 
+					label="TPL_BIXNIAJFW_FIELD_GTAGMANAGE_LABEL" 
+					description="TPL_BIXNIAJFW_FIELD_GTAGMANAGE_DESC" rows="10" cols="10" 
+					filter="raw"/>
+					
+				<field name="jstoend" type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_BIXNIAJFW_JSTOEND_LABEL"
+					description="TPL_BIXNIAJFW_JSTOEND_DESC" >
+					<option value="1">TPL_BIXNIAJFW_YES</option>
+					<option value="0">TPL_BIXNIAJFW_NO</option>
+				</field>				
+					
+										
+			</fieldset>
+			
+			
+		</fields>
+	</config>	
+</extension>
