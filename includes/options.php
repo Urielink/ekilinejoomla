@@ -164,14 +164,14 @@ if ($fluidContainer == '1' ): $fluidContainer = 'container-fluid'; elseif ($flui
 /**En caso de tener 3 columnas ocupadas, o solo ocupar 2, establece el ancho de cada columna que se genera en las opciones y encierralas en un row **/
  if ($this->countModules('aside-left') && $this->countModules('aside-right'))
  {
-	$leftWidth    = $leftColumn != 0 ? 'col-md-' . $leftColumn : '';
-	$comWidth    = $comColumn != 0 ? 'col-md-' . $comColumn : '';
+	$leftWidth    = $leftColumn != 0 ? 'col-md-pull-'.$comColumn.' col-md-' . $leftColumn : '';
+	$comWidth    = $comColumn != 0 ? 'col-md-push-'.$leftColumn.' col-md-' . $comColumn : '';
 	$rightWidth    = $rightColumn != 0 ? 'col-md-' . $rightColumn : ''; 	
  }
 elseif ($this->countModules('aside-left') && !$this->countModules('aside-right'))
  {
-	$leftWidth    = $leftColumn != 0 ? 'col-md-' . $leftColumn : '';
-	$comWidth    = $comColumn != 0 ? 'col-md-' . ($comColumn + $rightColumn) : '';
+	$leftWidth    = $leftColumn != 0 ? 'col-md-pull-'.($comColumn + $rightColumn).' col-md-' . $leftColumn : '';
+	$comWidth    = $comColumn != 0 ? 'col-md-push-'.$leftColumn.' col-md-' . ($comColumn + $rightColumn) : '';
  }
 elseif (!$this->countModules('aside-left') && $this->countModules('aside-right'))
  {
