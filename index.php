@@ -44,13 +44,7 @@ include_once('templates/'.$this->template.'/includes/options.php');
 	<?php endif; ?>		
 <?php // en caso de layout 1, 2 o 3 establece las medidas de todo?>		
 	<?php echo $rowOpen;?>
-	
-	<?php if ($this->countModules('aside-left') && $leftColumn != 0): ?>
-		<aside class="<?php echo $leftWidth;?>" >
-			<jdoc:include type="modules" name="aside-left" style="none"/> 
-		</aside>	
-	<?php endif; ?>		
-	
+		
 	<section class="<?php echo $comWidth;?>" >
 	
 		<?php if ($this->countModules('content-top')): ?>
@@ -66,6 +60,12 @@ include_once('templates/'.$this->template.'/includes/options.php');
 		<?php endif; ?>				
 		
 	</section>
+	
+    <?php if ($this->countModules('aside-left') && $leftColumn != 0): ?>
+        <aside class="<?php echo $leftWidth;?>" >
+            <jdoc:include type="modules" name="aside-left" style="none"/> 
+        </aside>    
+    <?php endif; ?>     
 	
 	<?php if ($this->countModules('aside-right') && $rightColumn != 0): ?>
 		<aside class="<?php echo $rightWidth;?>" >
