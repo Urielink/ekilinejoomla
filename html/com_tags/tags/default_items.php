@@ -50,12 +50,17 @@ JFactory::getDocument()->addScriptDeclaration("
 	<?php if ($this->params->get('filter_field') || $this->params->get('show_pagination_limit')) : ?>
 		<fieldset class="filters btn-toolbar-no row">
 			<?php if ($this->params->get('filter_field')) : ?>
+			    
+			    
 				<div class="col-sm-8">
-					<label class="filter-search-lbl element-invisible" for="filter-search">
-						<?php echo JText::_('COM_TAGS_TITLE_FILTER_LABEL') . '&#160;'; ?>
-					</label>
 					<div class="btn-group-no input-group">
+
+                        <label class="filter-search-lbl element-invisible input-group-addon" for="filter-search">
+                            <?php echo JText::_('COM_TAGS_TITLE_FILTER_LABEL') . '&#160;'; ?>
+                        </label>
+					    
 						<input type="text" name="filter-search" id="filter-search" value="<?php echo $this->escape($this->state->get('list.filter')); ?>" class="form-control inputbox" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_TAGS_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('COM_TAGS_TITLE_FILTER_LABEL'); ?>" />
+					    
 					    <span class="input-group-btn">
 							<button type="button" name="filter-search-button" title="<?php echo JText::_('JSEARCH_FILTER_SUBMIT'); ?>" onclick="document.adminForm.submit();" class="btn btn-primary">
 								<span class="glyphicon glyphicon-search"></span>
@@ -64,8 +69,11 @@ JFactory::getDocument()->addScriptDeclaration("
 								<span class="glyphicon glyphicon-remove"></span>
 							</button>
 						</span>
+						
 					</div>
 				</div>
+				
+				
 			<?php endif; ?>
 			<?php if ($this->params->get('show_pagination_limit')) : ?>
 				<div class="col-sm-4">
