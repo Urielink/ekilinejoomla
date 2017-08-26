@@ -82,19 +82,22 @@ include_once('templates/'.$this->template.'/includes/options.php');
 		</section>
 	<?php endif; ?>		
 		
-	<footer>
-	
-	<?php if ($this->countModules('footer')): ?>
-		<div class="row">
-			<jdoc:include type="modules" name="footer" style="none"/> 
-		</div>	
-	<?php endif; ?>		
-	
-		<small>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config->get( 'sitename' )); ?><i class="nav-text pull-right"><?php echo JText::_('TPL_BIXNIAJFW_POWERED_BY');?> <a href="http://www.joomla.org/">Joomla!&#174;</a></i></small>
+</div>  
 		
-	</footer>	
+<footer>
+    <div class="container">
+
+<?php if ($this->countModules('footer')): ?>
+	<div class="row">
+		<jdoc:include type="modules" name="footer" style="none"/> 
+	</div>	
+<?php endif; ?>		
+
+	<small>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config->get( 'sitename' )); ?><i class="nav-text pull-right"><?php echo JText::_('TPL_BIXNIAJFW_POWERED_BY');?> <a href="http://www.joomla.org/">Joomla!&#174;</a></i></small>
 	
-</div>	
+	</div>
+</footer>	
+	
 
 <jdoc:include type="modules" name="bottom" style="none"/>
 <jdoc:include type="modules" name="debug" style="none"/>
