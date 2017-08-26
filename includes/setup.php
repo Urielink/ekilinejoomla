@@ -33,7 +33,7 @@ $id = $input->getInt('id');
 */
 //ID de item
 $article = JTable::getInstance('content');
-$article->load($id);
+// $article->load($id);
 
 /*
  * para extraer la información de la categoría, 
