@@ -33,9 +33,11 @@ include_once('templates/'.$this->template.'/includes/options.php');
 	
 <div class="<?php echo $fluidContainer;?>">
 
+    <?php if ($this->countModules('header')): ?>
 	<header>	
 		<jdoc:include type="modules" name="header" style="none"/> 
 	</header>	
+    <?php endif; ?>     
 	
 	<?php if ($this->countModules('section-top')): ?>
 		<section>

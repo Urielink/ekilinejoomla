@@ -345,7 +345,6 @@ a.thumbnail:hover,a.thumbnail:focus{border-color:#08c;-webkit-box-shadow:0 1px 4
 .thumbnail .caption{padding:9px;color:#555;}
 
 @media (max-width:767px){
-.row,.thumbnails{margin-left:0;}
  .thumbnails > li{float:none;margin-left:0;}
 }
 
