@@ -403,44 +403,31 @@ img {
    ========================================================================== */
 
 @font-face {
-    font-family: 'ITCGoudySansStdBold';
-    src: url('../fonts/goudysansstd-bold-webfont.eot');
-    src: local('☺'), url('../fonts/goudysansstd-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/goudysansstd-bold-webfont.woff') format('woff'),
-         url('../fonts/goudysansstd-bold-webfont.ttf') format('truetype'),
-         url('../fonts/goudysansstd-bold-webfont.svg#ITCGoudySansStdBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'ITC Goudy Sans Std Bold';
+  src: url('../fonts/GoudySansStd-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GoudySansStd-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/GoudySansStd-Bold.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/GoudySansStd-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/GoudySansStd-Bold.svg#b70f89b84cbb3645f5247c8b83f7c541') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
 }
 
 @font-face {
-    font-family: 'TrajanProBold';
-    src: url('../fonts/trajanpro-bold-webfont.eot');
-    src: local('☺'), url('../fonts/trajanpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/trajanpro-bold-webfont.woff') format('woff'),
-         url('../fonts/trajanpro-bold-webfont.ttf') format('truetype'),
-         url('../fonts/trajanpro-bold-webfont.svg#TrajanProBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: 'ITC Goudy Sans Std Book';
+  src: url('../fonts/GoudySansStd-Book.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/GoudySansStd-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/GoudySansStd-Book.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/GoudySansStd-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/GoudySansStd-Book.svg#6d0d7153c71ff92de6f44e424d88c2a7') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
 }
 
-@font-face {
-    font-family: 'TrajanProRegular';
-    src: url('../fonts/trajanpro-regular-webfont.eot');
-    src: local('☺'), url('../fonts/trajanpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/trajanpro-regular-webfont.woff') format('woff'),
-         url('../fonts/trajanpro-regular-webfont.ttf') format('truetype'),
-         url('../fonts/trajanpro-regular-webfont.svg#TrajanProRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-h1,h2,h3,h4,.navbar ul{
-	font-family:'ITCGoudySansStdBold';
-}
+h1,h2,h3,h4{font-family: 'ITC Goudy Sans Std Bold';text-transform:uppercase;}
+.navbar ul {font-family: 'ITC Goudy Sans Std Bold';}
 
 
 /* ==========================================================================
@@ -474,6 +461,7 @@ h1,h2,h3,h4,.navbar ul{
 			-o-transform : scale(.5); /* Opera */
 			-ms-transform : scale(.5); /* IE9 */
 		}
+	h1,h2,h3,h4{font-family: 'ITC Goudy Sans Std Book';}		
 }
 
 /*Tabletas grandes en general*/
