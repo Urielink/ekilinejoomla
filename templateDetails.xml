@@ -130,6 +130,16 @@
 					label="TPL_BIXNIAJFW_FIELD_FONTSCONTENT_LABEL"
 					description="TPL_BIXNIAJFW_FIELD_FONTSCONTENT_DESC"
 					filter="string" />
+					
+				<field name="addFontawesome" type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					label="TPL_BIXNIAJFW_ADDFONTAWESOME_LABEL"
+					description="TPL_BIXNIAJFW_ADDFONTAWESOME_DESC" >
+					<option value="1">TPL_BIXNIAJFW_YES</option>
+					<option value="0">TPL_BIXNIAJFW_NO</option>
+				</field>
+					
 					   
 			</fieldset>			
 

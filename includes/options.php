@@ -21,6 +21,7 @@ $footerbkgcolor = $templateparams->get('footerbkgcolor');
 $textcolor = $templateparams->get('textcolor');
 $fontsheading = $templateparams->get('fontsheading');
 $fontscontent = $templateparams->get('fontscontent');
+$addFontawesome = $templateparams->get('addFontawesome');
 
 
 /*Optimización*/
@@ -243,7 +244,14 @@ if ($fontsheading != null || $fontscontent != null){
     }        
     $doc->addStyleDeclaration( $gfStyle );
 }
-	
+
+/**
+ * FontAwesome
+ */
+if ($addFontawesome == '1' ){
+    $doc->addStyleSheet($tpath . '/css/font-awesome.min.css');  
+}
+ 	
 
 /** Dividir el contenido en head: http://joomla.stackexchange.com/questions/4772/joomla-templating-custom-jdoc-statements **/
 if ($jstoend == '1') {
