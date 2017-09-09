@@ -399,6 +399,51 @@ img {
 .banner p { margin:0px;line-height:0px;}
 
 /* ==========================================================================
+   Estilos del tema
+   ========================================================================== */
+
+@font-face {
+    font-family: 'ITCGoudySansStdBold';
+    src: url('../fonts/goudysansstd-bold-webfont.eot');
+    src: local('☺'), url('../fonts/goudysansstd-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/goudysansstd-bold-webfont.woff') format('woff'),
+         url('../fonts/goudysansstd-bold-webfont.ttf') format('truetype'),
+         url('../fonts/goudysansstd-bold-webfont.svg#ITCGoudySansStdBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'TrajanProBold';
+    src: url('../fonts/trajanpro-bold-webfont.eot');
+    src: local('☺'), url('../fonts/trajanpro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/trajanpro-bold-webfont.woff') format('woff'),
+         url('../fonts/trajanpro-bold-webfont.ttf') format('truetype'),
+         url('../fonts/trajanpro-bold-webfont.svg#TrajanProBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'TrajanProRegular';
+    src: url('../fonts/trajanpro-regular-webfont.eot');
+    src: local('☺'), url('../fonts/trajanpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/trajanpro-regular-webfont.woff') format('woff'),
+         url('../fonts/trajanpro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/trajanpro-regular-webfont.svg#TrajanProRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1,h2,h3,h4,.navbar ul{
+	font-family:'ITCGoudySansStdBold';
+}
+
+
+/* ==========================================================================
 	AJUSTES RESPONSIVOS
  ========================================================================== */
 
