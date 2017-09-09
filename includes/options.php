@@ -220,24 +220,28 @@ $style = 'body{'.$backgroundimage.$bkgimglayout.$bkgcolor.$textcolor.'}'.$header
 
 	
 /**
- * Google fonts
+ * Google fonts 
  */	
-	
-if ($fontsheading != null ){
-	$href = 'https://fonts.googleapis.com/css?family='.htmlspecialchars($fontsheading);
-	$attribs = array('type' => 'text/css');
-	// añadir link al head: https://docs.joomla.org/JDocumentHTML/addHeadLink
-	$doc->addHeadLink( $href, 'stylesheet', 'rel', $attribs );
-		//Extraer el nombre de la fuente http://stackoverflow.com/questions/28507459/extract-font-name-and-display-with-quotation-mark
-		$font = '\'' . str_replace ('+', ' ', substr (htmlspecialchars($fontsheading) , 0, strpos (htmlspecialchars($fontsheading), ':'))) . '\'';
-		$doc->addStyleDeclaration( 'h1,h2,h3,h4,h5,h6{font-family:'.$font.';}' );
-}
-if ($fontscontent != null ){
-	$href = 'https://fonts.googleapis.com/css?family='.htmlspecialchars($fontscontent);
-	$attribs = array('type' => 'text/css');
-	$doc->addHeadLink( $href, 'stylesheet', 'rel', $attribs );
-		$font = '\'' . str_replace ('+', ' ', substr (htmlspecialchars($fontscontent) , 0, strpos (htmlspecialchars($fontscontent), ':'))) . '\'';
-		$doc->addStyleDeclaration( 'body{font-family:'.$font.';}' );
+
+if ($fontsheading != null || $fontscontent != null){
+    // GF link
+    $dash = ''; if ( $fontsheading && $fontscontent ) : $dash = '|' ; endif;
+    $href = 'https://fonts.googleapis.com/css?family='.htmlspecialchars($fontsheading).$dash.htmlspecialchars($fontscontent);
+    $attribs = array('type' => 'text/css');
+    // añadir link al head: https://docs.joomla.org/JDocumentHTML/addHeadLink
+    $doc->addHeadLink( $href, 'stylesheet', 'rel', $attribs );
+    // GF CSS
+    $gfStyle = '';
+    if ( $fontsheading ){        
+        //Extraer el nombre de la fuente http://stackoverflow.com/questions/28507459/extract-font-name-and-display-with-quotation-mark        
+        $fontH = '\'' . str_replace ('+', ' ', substr (htmlspecialchars($fontsheading) , 0, strpos (htmlspecialchars($fontsheading), ':'))) . '\'';
+        $gfStyle .= 'h1,h2,h3,h4,h5,h6{font-family:'.$fontH.';}';
+    }
+    if ( $fontscontent ){
+        $fontB = '\'' . str_replace ('+', ' ', substr (htmlspecialchars($fontscontent) , 0, strpos (htmlspecialchars($fontscontent), ':'))) . '\'';
+        $gfStyle .= 'body{font-family:'.$fontB.';}';
+    }        
+    $doc->addStyleDeclaration( $gfStyle );
 }
 	
 
