@@ -219,7 +219,7 @@ $textcolor = 'color:' . $textcolor . ';';
 $headerbkgcolor = 'header{background-color:' . $headerbkgcolor . ';}';
 $footerbkgcolor = 'footer{background-color:' . $footerbkgcolor . ';}';
 $linkcolor = 'a{color:' . $linkcolor . ';}';
-$menucolor = '.navbar{background-color:' . $menucolor . ';border-color:' . $menucolor . ';}';
+$menucolor = '.navbar{background-color:' . $menucolor . ';}';
 
 $style = 'body{'.$backgroundimage.$bkgimglayout.$bkgcolor.$textcolor.'}'.$headerbkgcolor.$footerbkgcolor.$linkcolor.$menucolor;
 	$doc->addStyleDeclaration( $style );
