@@ -19,6 +19,9 @@ $bkgcolor = $templateparams->get('bkgcolor');
 $headerbkgcolor = $templateparams->get('headerbkgcolor');
 $footerbkgcolor = $templateparams->get('footerbkgcolor');
 $textcolor = $templateparams->get('textcolor');
+$linkcolor = $templateparams->get('linkcolor');
+$menucolor = $templateparams->get('menucolor');
+
 $fontsheading = $templateparams->get('fontsheading');
 $fontscontent = $templateparams->get('fontscontent');
 $addFontawesome = $templateparams->get('addFontawesome');
@@ -215,8 +218,10 @@ $bkgcolor = 'background-color:' . $bkgcolor . ';';
 $textcolor = 'color:' . $textcolor . ';';
 $headerbkgcolor = 'header{background-color:' . $headerbkgcolor . ';}';
 $footerbkgcolor = 'footer{background-color:' . $footerbkgcolor . ';}';
+$linkcolor = 'a{color:' . $linkcolor . ';}';
+$menucolor = '.navbar{background-color:' . $menucolor . ';}';
 
-$style = 'body{'.$backgroundimage.$bkgimglayout.$bkgcolor.$textcolor.'}'.$headerbkgcolor.$footerbkgcolor;
+$style = 'body{'.$backgroundimage.$bkgimglayout.$bkgcolor.$textcolor.'}'.$headerbkgcolor.$footerbkgcolor.$linkcolor.$menucolor;
 	$doc->addStyleDeclaration( $style );
 
 	
@@ -254,6 +259,7 @@ if ($addFontawesome == '1' ){
  	
 
 /** Dividir el contenido en head: http://joomla.stackexchange.com/questions/4772/joomla-templating-custom-jdoc-statements **/
+$endScripts = '';
 if ($jstoend == '1') {
 //	require_once('templates/'.$this->template.'/includes/head.php');
 //	require_once('templates/'.$this->template.'/includes/scripts.php');

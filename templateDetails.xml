@@ -117,6 +117,15 @@
 				<field name="textcolor" type="color" default="#666"
 						label="TPL_BIXNIAJFW_FIELD_TEXTCOLOR_LABEL"
 						description="TPL_BIXNIAJFW_FIELD_TEXTCOLOR_DESC" />
+
+				<field name="linkcolor" type="color" default="#337ab7"
+						label="TPL_BIXNIAJFW_FIELD_LINKCOLOR_LABEL"
+						description="TPL_BIXNIAJFW_FIELD_LINKCOLOR_DESC" />
+
+				<field name="menucolor" type="color" default="#f8f8f8"
+						label="TPL_BIXNIAJFW_FIELD_MENUCOLOR_LABEL"
+						description="TPL_BIXNIAJFW_FIELD_MENUCOLOR_DESC" />
+
 						
 				<field type="spacer" name="typedesc" label="TPL_BIXNIAJFW_TYPE_DESC" />
 												
