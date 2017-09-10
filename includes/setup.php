@@ -54,9 +54,8 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 $doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1' );
 
 // Añade los estilos CSS bootstrap
-$doc->addStyleSheet($tpath . '/bootstrap/css/bootstrap.min.css');
-// $doc->addStyleSheet($tpath . '/bootstrap/css/bootstrap-theme.min.css');
-$doc->addStyleSheet($tpath . '/bootstrap/css/ie10-viewport-bug-workaround.css');
+$doc->addStyleSheet($tpath . '/css/bootstrap.min.css');
+$doc->addStyleSheet($tpath . '/css/ie10-viewport-bug-workaround.css');
 // Añade el estilo del template
 $doc->addStyleSheet($tpath . '/css/template.css');
 
@@ -66,8 +65,8 @@ JHtml::_('bootstrap.framework', false);
 unset($doc->_scripts[JURI::root(true).'/media/jui/js/bootstrap.min.js']);
 
 // Añade los js de bootstrap (requiere este orden)
-$doc->addScript($tpath.'/bootstrap/js/bootstrap.min.js');
-$doc->addScript($tpath.'/bootstrap/js/ie10-viewport-bug-workaround.js');
+$doc->addScript($tpath.'/js/bootstrap.min.js');
+$doc->addScript($tpath.'/js/ie10-viewport-bug-workaround.js');
 
 // Añadir librerias auxiliares de template (requiere este orden)
 $doc->addScript($tpath.'/js/jquery.lazyload.js');
