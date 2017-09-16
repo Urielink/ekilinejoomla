@@ -59,14 +59,16 @@ $doc->addStyleSheet($tpath . '/css/ie10-viewport-bug-workaround.css');
 // Añade el estilo del template
 $doc->addStyleSheet($tpath . '/css/template.css');
 
-// Deshabilita los scripts que no necesito: bootstrap de joomla.
-JHtml::_('bootstrap.framework', false);
-//dehabilitar el framework.bootstrap de joomla
-unset($doc->_scripts[JURI::root(true).'/media/jui/js/bootstrap.min.js']);
-
-// Añade los js de bootstrap (requiere este orden)
-$doc->addScript($tpath.'/js/bootstrap.min.js');
-$doc->addScript($tpath.'/js/ie10-viewport-bug-workaround.js');
+/** 10 de septiembre, si el usuario es invitado reemplaza los scripts **/
+if($user->guest){
+    // Deshabilita los scripts que no necesito: bootstrap de joomla.
+    JHtml::_('bootstrap.framework', false);
+    //dehabilitar el framework.bootstrap de joomla
+    unset($doc->_scripts[JURI::root(true).'/media/jui/js/bootstrap.min.js']);
+    // Añade los js de bootstrap (requiere este orden)
+    $doc->addScript($tpath.'/js/bootstrap.min.js');
+    $doc->addScript($tpath.'/js/ie10-viewport-bug-workaround.js');
+}
 
 // Añadir librerias auxiliares de template (requiere este orden)
 $doc->addScript($tpath.'/js/jquery.lazyload.js');

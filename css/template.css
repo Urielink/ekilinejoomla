@@ -399,7 +399,7 @@ img {
 .banner p { margin:0px;line-height:0px;}
 
 /* ==========================================================================
-   Estilos del tema
+   Estilos del tema **HijosDelRolStyles
    ========================================================================== */
 
 @font-face {
@@ -429,6 +429,40 @@ img {
 h1,h2,h3,h4{font-family: 'ITC Goudy Sans Std Bold';text-transform:uppercase;}
 .navbar ul {font-family: 'ITC Goudy Sans Std Bold';}
 
+.navbar{border-top:2px solid #ADBBC4;border-bottom:2px solid #ADBBC4;border-left:none;border-right:none;border-radius:0px;color: #44535C;}
+.navbar-inverse .navbar-nav > li > a{color:#44535C;text-shadow:0px 1px 0px #DEE4E7;text-transform:uppercase;}
+.navbar-inverse .navbar-nav > li > a:focus,.navbar-inverse .navbar-nav > li > a:hover{color:#E2E7EA;background-color:transparent;text-shadow:0px -1px 0px #445360;}
+
+#decoraciones{}
+.xnavbar{
+   background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAP0lEQVQYlWNomjz/f3J56//ipp7/TZPn48QM2ASTy1sJK4zPqiLeROooxGYlsgexmjhr6WYMjdRzIyyoiDYRAHM3C4JFJlFVAAAAAElFTkSuQmCC') repeat;
+}
+.navbar .container::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid #ADBBC4;
+    border-bottom: 2px solid #44535C;
+    float: left;
+    transform: rotate(45deg);
+    margin-top: 15px;
+}
+.navbar .container::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid #ADBBC4;
+    border-bottom: 2px solid #44535C;
+    position: relative;
+    transform: rotate(-45deg);
+    float: right;
+    margin-top: -35px;
+}
+
+
+footer h1,footer h2,footer h3,footer h4,footer h5,footer h6{color: #82939F;}
+footer a{color: #C28B4B;}
+footer {color: #FFFFFF;}
 
 /* ==========================================================================
 	AJUSTES RESPONSIVOS
@@ -461,6 +495,7 @@ h1,h2,h3,h4{font-family: 'ITC Goudy Sans Std Bold';text-transform:uppercase;}
 			-o-transform : scale(.5); /* Opera */
 			-ms-transform : scale(.5); /* IE9 */
 		}
+/*HijosDelRolStyles*/		
 	h1,h2,h3,h4{font-family: 'ITC Goudy Sans Std Book';}		
 }
 
